@@ -15,6 +15,8 @@ Conteúdo baseado na apresentação executiva enterprise (outubro de 2026). Visu
 | `privacidade.html`, `termos.html` | Páginas legais (texto a definir) |
 | `favicon.svg`, `og-image.png` | Ícone e imagem de compartilhamento |
 
+Publicado em https://garcia235.github.io/locutor-digital-landing/ (GitHub Pages, branch `main`).
+
 Site estático, sem build. Para ver localmente:
 
 ```bash
@@ -25,4 +27,4 @@ python3 -m http.server 8000
 
 - **Formulário:** defina `FORM_ENDPOINT` no topo de `main.js` (Formspree, webhook do n8n ou endpoint próprio que aceite POST em JSON). Sem isso, o formulário valida os campos e avisa que o envio não está ativo.
 - **Textos legais:** substitua o conteúdo provisório de `privacidade.html` e `termos.html`.
-- **og:image:** quando houver domínio definitivo, troque `og-image.png` por URL absoluta nas meta tags de `index.html`.
+- **Domínio próprio:** se o site sair do GitHub Pages, atualize as URLs de `canonical`, `og:url` e `og:image` em `index.html`.
