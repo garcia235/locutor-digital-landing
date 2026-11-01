@@ -1782,6 +1782,209 @@ p {
   }
 }
 
+/* ---------- Preços ---------- */
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--s-200);
+  align-items: stretch;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-200);
+  padding: var(--s-400) var(--s-300);
+}
+
+.plan:hover {
+  border-color: var(--line-strong);
+}
+
+.plan__tag {
+  align-self: flex-start;
+  justify-self: start;
+  padding: var(--s-50) var(--s-100);
+  border-radius: var(--r-full);
+  background: var(--orange-soft);
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.plan__tag--blue {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.plan__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-50);
+}
+
+.plan__price .heading-3 {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.plan__quota {
+  display: grid;
+  gap: var(--s-25);
+  padding: var(--s-200);
+  border-radius: var(--r-xl);
+  background: var(--surface-2);
+}
+
+.plan__quota .heading-5 {
+  color: var(--blue);
+  font-family: var(--mono);
+}
+
+.plan__list {
+  display: grid;
+  gap: var(--s-100);
+  padding-top: var(--s-200);
+  border-top: 1px solid var(--line);
+}
+
+.plan__list li {
+  display: flex;
+  gap: var(--s-75);
+}
+
+.plan__list i {
+  flex: none;
+  margin-top: var(--s-25);
+  color: var(--blue);
+  font-size: 16px;
+}
+
+.plan__note {
+  color: var(--text-3);
+}
+
+.plan__cta {
+  width: 100%;
+  margin-top: auto;
+}
+
+.plan--featured {
+  border-color: var(--orange-strong);
+  background: linear-gradient(var(--orange-soft), var(--orange-soft)), var(--surface);
+}
+
+.plan--featured:hover {
+  border-color: var(--orange);
+}
+
+.plan--featured .plan__tag {
+  background: var(--orange-strong);
+  color: #fff;
+}
+
+.plan--wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) auto;
+  gap: var(--s-500);
+  align-items: center;
+}
+
+.plan__intro {
+  display: grid;
+  gap: var(--s-200);
+}
+
+.plan--wide .plan__list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0 0 0 var(--s-500);
+  border-top: 0;
+  border-left: 1px solid var(--line);
+}
+
+.plan--wide .plan__cta {
+  width: auto;
+  margin-top: 0;
+}
+
+.studio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--s-500);
+  margin-top: var(--s-400);
+  padding: var(--s-500);
+  border-radius: var(--r-3xl);
+}
+
+.studio__copy {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: var(--s-200);
+}
+
+.studio__addons {
+  display: grid;
+  align-content: start;
+  gap: var(--s-100);
+}
+
+.studio__addons dl {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-2xl);
+  overflow: hidden;
+}
+
+.studio__addons dl div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s-200);
+  padding: var(--s-200) var(--s-300);
+}
+
+.studio__addons dl div + div {
+  border-top: 1px solid var(--line);
+}
+
+.studio__addons dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.plans__foot {
+  text-align: center;
+}
+
+.plans__foot a {
+  color: var(--text-2);
+}
+
+@media (max-width: 1099px) {
+  .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .plan--wide { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+  .plan--wide .plan__cta { grid-column: 1 / -1; justify-self: start; }
+}
+
+@media (max-width: 767px) {
+  .plans { grid-template-columns: minmax(0, 1fr); }
+  .plan { padding: var(--s-300); }
+  .plan--wide { grid-template-columns: minmax(0, 1fr); gap: var(--s-200); }
+  .plan--wide .plan__list {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--s-200) 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .plan--wide .plan__cta { width: 100%; }
+  .studio { grid-template-columns: minmax(0, 1fr); padding: var(--s-300); gap: var(--s-300); }
+  .studio__addons dl div { padding: var(--s-200); }
+}
+
 /* ---------- FAQ ---------- */
 
 .faq {

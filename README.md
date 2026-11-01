@@ -28,3 +28,4 @@ python3 -m http.server 8000
 - **Formulário:** defina `FORM_ENDPOINT` no topo de `main.js` (Formspree, webhook do n8n ou endpoint próprio que aceite POST em JSON). Sem isso, o formulário valida os campos e avisa que o envio não está ativo.
 - **Textos legais:** substitua o conteúdo provisório de `privacidade.html` e `termos.html`.
 - **Domínio próprio:** se o site sair do GitHub Pages, atualize as URLs de `canonical`, `og:url` e `og:image` em `index.html`.
+- **Preços:** os planos e pacotes Studio da seção `#precos` foram copiados de [locutordigital.com.br](https://locutordigital.com.br) em 31/10/2026. Se os valores mudarem, atualize a seção em `index.html` e as `offers` do JSON-LD no `<head>`.
